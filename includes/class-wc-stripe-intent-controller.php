@@ -704,8 +704,31 @@ class WC_Stripe_Intent_Controller {
 
 		$request = $this->build_base_payment_intent_request_params( $payment_information );
 
+		$transfer_data = [];
+		$casa1_stripe_account = $order->get_meta('casa1_stripe_account', true);
+		if(!empty($casa1_stripe_account)){
+			$amount = $payment_information['amount'];
+			$stripe_fee_percentage = floatval(get_option('casa1_stripe_fee_percentage', 0));
+			$stripe_fee_fixed = floatval(get_option('casa1_stripe_fee_fixed', 0));
+			$tax_percentage = floatval(get_option('casa1_stripe_tax_percentage', 0.16));
+			WC_Stripe_Logger::log("Fee percentage: ".$stripe_fee_percentage.", fee fixed: ".$stripe_fee_fixed.", tax percentage: ".$tax_percentage);
+			$total_stripe_fee = $stripe_fee_fixed + $amount * $stripe_fee_percentage;
+			$total_stripe_fee = $total_stripe_fee + $total_stripe_fee * $tax_percentage;
+			$account_application_fee_percentage = $casa1_stripe_account['application_fee'];
+			$application_fee = $amount * $account_application_fee_percentage  + $total_stripe_fee;
+
+			$transfer_data = [
+				'application_fee_amount' => $application_fee,
+				'transfer_data' => [
+					'destination' => $casa1_stripe_account['id']
+				]
+			];
+		}
+
+
 		$request = array_merge(
 			$request,
+			$transfer_data,
 			[
 				'amount'               => $payment_information['amount'],
 				'confirm'              => 'true',

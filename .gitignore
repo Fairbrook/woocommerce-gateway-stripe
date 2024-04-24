@@ -37,3 +37,5 @@ docker/bin/jt
 docker/data
 docker/wordpress
 docker/logs
+
+Session.vim

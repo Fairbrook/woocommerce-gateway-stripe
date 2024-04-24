@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooCommerce Stripe Gateway
+ * Plugin Name: WooCommerce Casa Uno Stripe Gateway
  * Plugin URI: https://wordpress.org/plugins/woocommerce-gateway-stripe/
  * Description: Take credit card payments on your store using Stripe.
  * Author: WooCommerce
@@ -13,6 +13,7 @@
  * WC tested up to: 8.8
  * Text Domain: woocommerce-gateway-stripe
  * Domain Path: /languages
+ * Update URI: casa-uno-stripe
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
