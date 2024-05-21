@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-04-24T15:21:10+00:00\n"
+"POT-Creation-Date: 2024-04-26T09:05:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: woocommerce-gateway-stripe\n"
@@ -98,7 +98,7 @@ msgstr ""
 #. translators: 1) blog name 2) order number
 #: includes/abstracts/abstract-wc-stripe-payment-gateway.php:450
 #: includes/class-wc-stripe-intent-controller.php:424
-#: includes/class-wc-stripe-intent-controller.php:738
+#: includes/class-wc-stripe-intent-controller.php:728
 #: includes/payment-methods/class-wc-stripe-upe-payment-gateway.php:620
 msgid "%1$s - Order %2$s"
 msgstr ""
@@ -1696,7 +1696,7 @@ msgid "Unable to process your request. Please reload the page and try again."
 msgstr ""
 
 #: includes/class-wc-stripe-intent-controller.php:481
-#: includes/class-wc-stripe-intent-controller.php:1012
+#: includes/class-wc-stripe-intent-controller.php:1002
 msgid "We're not able to add this payment method. Please refresh the page and try again."
 msgstr ""
 
@@ -1712,19 +1712,19 @@ msgstr ""
 msgid "A payment with ID %s was used in an attempt to pay for this order. This payment intent ID does not match any payments for this order, so it was ignored and the order was not updated."
 msgstr ""
 
-#: includes/class-wc-stripe-intent-controller.php:876
+#: includes/class-wc-stripe-intent-controller.php:866
 msgid "There was a problem processing the payment."
 msgstr ""
 
-#: includes/class-wc-stripe-intent-controller.php:898
+#: includes/class-wc-stripe-intent-controller.php:888
 msgid "Please reach out to us if the problem persists."
 msgstr ""
 
-#: includes/class-wc-stripe-intent-controller.php:1005
+#: includes/class-wc-stripe-intent-controller.php:995
 msgid "Unable to verify your request. Please refresh the page and try again."
 msgstr ""
 
-#: includes/class-wc-stripe-intent-controller.php:1031
+#: includes/class-wc-stripe-intent-controller.php:1021
 msgid "There was an error adding this payment method. Please refresh the page and try again"
 msgstr ""
 
